@@ -6,8 +6,11 @@ This project analyses authentication logs and identifies suspicious login activi
 
 ## Tools Used
 
-- Python
-- VS Code
+-Python 3 - log parsing and detection logic
+-Regular expressions - extracting timestamps, usernames and source IPs from auth.log
+
+## How It Works
+The script parses Linux auth.log entries, extracts failed authentication attempts, and groups them by source IP. Any IP exceeding the configured attempt threshold is flagged as suspicious, with its attempt count reported.
 
 ## Sample Findings
 
@@ -20,7 +23,6 @@ Suspicious IPs:
 
 ## Skills Demonstrated
 
-- Python scripting
-- Log analysis
-- Basic threat detection
-- Security automation
+-Authentication log parsing and analysis
+-Failed-login and brute-force pattern detection
+-Security automation in Python
